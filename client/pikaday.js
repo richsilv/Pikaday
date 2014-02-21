@@ -887,4 +887,6 @@
 
     };
 
+    window.Pikaday = Pikaday;
+
 })(true);
