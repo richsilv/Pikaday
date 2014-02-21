@@ -4,7 +4,7 @@
  * Copyright © 2014 David Bushell | BSD & MIT license | https://github.com/dbushell/Pikaday
  */
 
-function (root, factory)
+na = function(root, factory)
 {
     'use strict';
 
