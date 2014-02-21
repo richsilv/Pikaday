@@ -1,7 +1,7 @@
 Pikaday
 ========
 
-### A refreshing JavaScript Datepicker
+### A refreshing JavaScript Datepicker, packaged for Meteor.
 
 * Lightweight (less than 5kb minified and gzipped)
 * No dependencies (but plays well with [Moment.js][moment]
