@@ -1,13 +1,11 @@
-(function (moment)
+(function (hasMoment)
 {
     'use strict';
 
     /**
      * feature detection and helper functions
      */
-    var hasMoment = moment,
-
-    hasEventListeners = !!window.addEventListener,
+    var hasEventListeners = !!window.addEventListener,
 
     document = window.document,
 
@@ -552,6 +550,7 @@
          */
         toString: function(format)
         {
+            console.log(this._d, hasMoment, this._o, moment);
             return !isDate(this._d) ? '' : hasMoment ? moment(this._d).format(format || this._o.format) : this._d.toDateString();
         },
 
