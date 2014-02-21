@@ -8,7 +8,10 @@ Package.on_use(function (api) {
 
 	var path = Npm.require('path');
 	api.add_files('client/pikaday.css', 'client');
-	api.add_files('client/pikaday.js', 'client');
+	api.add_files([
+		'client/pikaday.js',
+		'client/export-pikaday.js'
+		], 'client');
 
   	api.export('Pikaday', 'client');
 });
