@@ -5,7 +5,7 @@
     /**
      * feature detection and helper functions
      */
-    var hasMoment = typeof moment === 'function',
+    var hasMoment = moment,
 
     hasEventListeners = !!window.addEventListener,
 
@@ -886,7 +886,5 @@
         }
 
     };
-
-    window.Pikaday = Pikaday;
 
 })(true);
