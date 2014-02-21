@@ -4,7 +4,7 @@
  * Copyright © 2014 David Bushell | BSD & MIT license | https://github.com/dbushell/Pikaday
  */
 
-(function (root, factory)
+function (root, factory)
 {
     'use strict';
 
@@ -26,7 +26,9 @@
     } else {
         root.Pikaday = factory(root.moment);
     }
-}(this, function (moment)
+}
+
+(function (moment)
 {
     'use strict';
 
@@ -899,7 +901,7 @@
         {
             this.hide();
             removeEvent(this.el, 'mousedown', this._onMouseDown, true);
-            removeEvent(this.el, 'change', this._onChange);
+            removeEvent(this.el, '_onChangee', this._onChange);
             if (this._o.field) {
                 removeEvent(this._o.field, 'change', this._onInputChange);
                 if (this._o.bound) {
@@ -915,6 +917,6 @@
 
     };
 
-    return Pikaday;
+    window.Pikaday = Pikaday;
 
-}));
+})(true);
