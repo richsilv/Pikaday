@@ -23,13 +23,10 @@ Also see the [changelog](CHANGELOG.md)
 <input type="text" id="datepicker">
 ```
 
-Add the JavaScript to the end of your document:
+Add the JavaScript to your rendered callback, or similar:
 
-```html
-<script src="pikaday.js"></script>
-<script>
-    var picker = new Pikaday({ field: document.getElementById('datepicker') });
-</script>
+```javascript
+var picker = new Pikaday({ field: document.getElementById('datepicker') });
 ```
 
 If you're using **jQuery** make sure to pass only the first element:
@@ -55,18 +52,17 @@ See the [moment.js example][] for a full version.
 
 ```html
 <input type="text" id="datepicker" value="9 Oct 2014">
+```
 
-<script src="moment.js"></script>
-<script src="pikaday.js"></script>
-<script>
-    var picker = new Pikaday({
-        field: document.getElementById('datepicker'),
-        format: 'D MMM YYYY',
-        onSelect: function() {
-            console.log(this.getMoment().format('Do MMMM YYYY'));
-        }
-    });
-</script>
+Then in your rendered callback, or similar:
+```javascript
+var picker = new Pikaday({
+    field: document.getElementById('datepicker'),
+    format: 'D MMM YYYY',
+    onSelect: function() {
+        console.log(this.getMoment().format('Do MMMM YYYY'));
+    }
+});
 ```
 
 ### Configuration
@@ -99,11 +95,7 @@ Pikaday has many useful options:
 The normal version of Pikaday does not require jQuery, however there is a jQuery plugin if that floats your boat (see `plugins/pikaday.jquery.js` in the repository). This version requires jQuery, naturally, and can be used like other plugins:  
 See the [jQuery example][] for a full version.
 
-```html
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="pikaday.js"></script>
-<script src="plugins/pikaday.jquery.js"></script>
-<script>
+```javascript
 
 // activate datepickers for all elements with a class of `datepicker`
 $('.datepicker').pikaday({ firstDay: 1 });
@@ -111,44 +103,7 @@ $('.datepicker').pikaday({ firstDay: 1 });
 // chain a few methods for the first datepicker, jQuery style!
 $('.datepicker').eq(0).pikaday('show').pikaday('gotoYear', 2042);
 
-</script>
 ```
-
-## AMD support
-
-If you use a modular script loader than Pikaday is not bound to the global object and will fit nicely in your build process. You can require Pikaday just like any other module.  
-See the [AMD example][] for a full version.
-
-```javascript
-require(['pikaday'], function(Pikaday) {
-    var picker = new Pikaday({ field: document.getElementById('datepicker') });
-});
-```
-The same applies for the jQuery plugin mentioned above.  
-See the [jQuery AMD example][] for a full version.
-
-```javascript
-require(['jquery', 'pikaday.jquery'], function($) {
-    $('#datepicker').pikaday();
-});
-```
-
-## CommonJS module support
-
-If you use a CommonJS compatible environment you can use the require function to import Pikaday.
-
-
-```javascript
-var pikaday = require('pikaday');
-```
-
-When you bundle all your required modules with [Browserify][browserify] and you don't use [Moment.js][moment] specify the ignore option:
-
-`browserify main.js -o bundle.js -i moment`
-
-## Ruby on Rails
-
-If you're using **Ruby on Rails**, make sure to check out the [Pikaday gem][gem].
 
 ## Methods
 
