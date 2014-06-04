@@ -2,7 +2,7 @@
   "name": "pikaday",
   "version": "1.2.0",
   "description": "A refreshing JavaScript Datepicker — lightweight, no dependencies, modular CSS",
-  "homepage": "http://dbushell.github.io/Pikaday/",
-  "git": "https://github.com/dbushell/Pikaday.git",
+  "homepage": "https://github.com/richsilv/Pikaday/",
+  "git": "https://github.com/richsilv/Pikaday.git",
   "packages": {}
 }
