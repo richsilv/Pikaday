@@ -17,6 +17,15 @@ Also see the [changelog](CHANGELOG.md)
 
 ## Usage
 
+
+#### Add to your Meteor project
+
+```shell
+mrt add pikaday
+```
+
+#### Initialise the Date Picker
+
 **Pikaday** can be bound to an input field:
 
 ```html
