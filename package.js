@@ -7,7 +7,7 @@ Package.describe({
 
 Package.on_use(function (api) {
 	api.use('jquery', 'client');
-	api.use('moment', 'client');	
+	api.use('mrt:moment', 'client');	
 
 	var path = Npm.require('path');
 	api.add_files('client/pikaday.css', 'client');
