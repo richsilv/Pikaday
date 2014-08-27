@@ -2,7 +2,7 @@ Package.describe({
 	"summary": "Pikaday JavaScript Datepicker for Meteor — lightweight, no dependencies, modular CSS",
 	"version": "0.1.1",
   	"git": "https://github.com/richsilv/Pikaday.git",
-  	"name": "richsilv:Pikaday"
+  	"name": "richsilv:pikaday"
 });
 
 Package.on_use(function (api) {
