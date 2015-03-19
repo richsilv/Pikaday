@@ -7,7 +7,7 @@ Package.describe({
 Package.on_use(function (api) {
  	api.versionsFrom("METEOR@0.9.1");
 	api.use('jquery', 'client');
-	api.use('mrt:moment@2.8.1', 'client');	
+	api.use('momentjs:moment@2.9.0', 'client');	
 
 	api.add_files('client/pikaday.css', 'client');
 	api.add_files([
