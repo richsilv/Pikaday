@@ -33,8 +33,7 @@
 }
 
 .pika-label {
-    display: inline-block;
-    *display: inline;
+    display: inline;
     position: relative;
     z-index: 9999;
     overflow: hidden;
